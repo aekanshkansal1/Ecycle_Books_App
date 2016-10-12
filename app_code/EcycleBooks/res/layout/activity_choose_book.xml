@@ -1,0 +1,71 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/backg33"
+    tools:context="com.aekanshkansal.ecyclebooks.ChooseBook" >
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:hint="@string/add_book_bname"
+        android:maxLength="150"
+        android:inputType="textPersonName" />
+
+    <ListView
+        android:id="@+id/listView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp" >
+    </ListView>
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/editText1"
+        android:layout_centerHorizontal="true"
+        android:text="@string/choose_book_search" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:layout_alignStart="@+id/listView1"
+        android:layout_below="@+id/button1"
+        android:text="@string/choose_book_notfound"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+<!--   <ImageButton
+        android:id="@+id/imageButton1"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/listView1"
+        android:layout_below="@+id/button1"
+        android:contentDescription="@string/choose_book_content_description"
+        android:src="@drawable/add"
+        />-->
+
+        <Button
+        android:id="@+id/imageButton1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/listView1"
+        android:layout_below="@+id/button1"
+        android:text="@string/addnew" />
+    
+</RelativeLayout>

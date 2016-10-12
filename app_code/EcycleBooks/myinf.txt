@@ -1,0 +1,5 @@
+Some Constraints
+
+->If school is not there it will send "NA" at server.
+->If Userid is not stored in shared preference -1 is returned as default value when asked userinformation.
+->mail id is unique in database so need to give it null explicitly by webservice when we are using login with fb/gmail etc.
