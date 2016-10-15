@@ -1,6 +1,6 @@
 # Ecycle_Books_App
 
-This project is just provided here for reference/contribution. Available for Free commercial/Non Commercial only after consent of developer. Mail id-aekanshkansal1@gmail.com
+This project is provided here for reference/contribution.
 
 Mobile and Web Application Project to recycle old books. People can sell, donate and purchase books through the application.
 Technology used are Java, Android, PHP, MySQL, JSON
