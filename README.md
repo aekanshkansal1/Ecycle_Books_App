@@ -19,7 +19,7 @@ To setup the project
 
 Android App Code is contained in folder app_code/EcycleBooks
 
-->Go to the src/com/aekanshkansal/ecyclebooks and update the URL like REGISTER_URL,LOGIN_URL and similar in java activity files with the exact address of the web services i.e. the webpage locations as per website on which you have hosted.
+->Go to the app_code/EcycleBooks/src/com/aekanshkansal/ecyclebooks and update the URL like REGISTER_URL,LOGIN_URL and similar in java activity files with the exact address of the web services i.e. the webpage locations as per website on which you have hosted.
 ->Rebuild the application and use
 
 The final working apk is included which is using the webservices and database from online server.
