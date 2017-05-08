@@ -142,7 +142,7 @@ public class SellBookActivity extends Activity {
 		JSONParser jparser=new JSONParser();
 		
 		private ProgressDialog pDialog;
-		private static final String POST_SELL_URL="http://yoursite_webservice/sellbook.php";
+		private static final String POST_SELL_URL="http://special11.com/EcycleBooks/sellbook.php";
 		@Override
 		protected void onPreExecute() {
 			super.onPreExecute();

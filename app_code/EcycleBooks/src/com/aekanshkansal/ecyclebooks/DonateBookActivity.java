@@ -120,7 +120,7 @@ public class DonateBookActivity extends Activity {
 		JSONParser jparser=new JSONParser();
 		
 		private ProgressDialog pDialog;
-		private static final String POST_DONATE_URL="http://yoursite_webservice/donatebook.php";
+		private static final String POST_DONATE_URL="http://special11.com/EcycleBooks/donatebook.php";
 		@Override
 		protected void onPreExecute() {
 			super.onPreExecute();

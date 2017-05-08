@@ -203,7 +203,7 @@ public class UserInfoActivity extends Activity {
 		JSONParser jparser=new JSONParser();
 		
 		private ProgressDialog pDialog;
-		private static final String PROFILE_URL="http://yoursite_webservice/accountinfo.php";
+		private static final String PROFILE_URL="http://special11.com/EcycleBooks/accountinfo.php";
 		@Override
 		protected void onPreExecute() {
 			super.onPreExecute();

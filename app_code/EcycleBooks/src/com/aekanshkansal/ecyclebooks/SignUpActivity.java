@@ -148,7 +148,7 @@ public class SignUpActivity extends Activity {
 		//creating progress dialog to show progress
 		private ProgressDialog pDialog;
 		//url for register on server
-		private static final String REGISTER_URL="http://yoursite_webservice/register.php";
+		private static final String REGISTER_URL="http://special11.com/EcycleBooks/register.php";
 		
 		//This method is executed before doInBackground
 		//ProgressDialog is shown to users here

@@ -6,15 +6,15 @@ $df=new db_function();
 $response=Array("error"=>false);
 
 //If school is not there it will get NA
-if(isset($_POST['userid']) && isset($_POST['bookid']) && isset($_POST['edition'])) {
-    $userid = $_POST['userid'];
-    $bookid = $_POST['bookid'];
-    $edition = $_POST['edition'];
+if(isset($_POST['bookname']) && isset($_POST['author']) && isset($_POST['publication'])) {
+    $bookname = $_POST['bookname'];
+    $author = $_POST['author'];
+    $publication = $_POST['publication'];
 
-    if (($duplicate = $df->duplicatePosts($userid, $bookid, $edition,'donated')) == true) {
+    if (($duplicate = $df->duplicateBook($bookname, $author,$publication)) == true) {
         $response["error"] = true;
         $response["status"] = "failure";
-        $response["error_msg"] = "Already Posted Book For Sale.";
+        $response["error_msg"] = "Already Added Book.";
         echo json_encode($response);
     }
     else if ($duplicate == -1) {
@@ -24,7 +24,7 @@ if(isset($_POST['userid']) && isset($_POST['bookid']) && isset($_POST['edition']
         echo json_encode($response);
     }
     else {
-        if ($df->donateBooks($userid, $bookid, $edition)) {
+        if ($df->addBooks($bookname, $author, $publication)) {
             $response["error"] = false;
             $response["status"] = "success";
             echo json_encode($response);

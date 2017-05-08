@@ -125,7 +125,7 @@ public class SignInActivity extends Activity{
 		
 		private ProgressDialog pDialog;
 		//url for login on server
-		private static final String LOGIN_URL="http://yoursite/EcycleBooks/login.php";
+		private static final String LOGIN_URL="http://special11.com/EcycleBooks/login.php";
 		
 		@Override
 		protected void onPreExecute() {
