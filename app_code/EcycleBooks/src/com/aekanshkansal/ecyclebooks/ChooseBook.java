@@ -129,7 +129,7 @@ public class ChooseBook extends Activity {
 		
 		private ProgressDialog pDialog;
 		//url for login on server
-		private static final String SEARCH_URL="http://special11.com/EcycleBooks/searchbook.php";
+		private static final String SEARCH_URL="website/searchbook.php";
 		//This adapter is just used to get the data and store whole data.
 		//This is not used to show data as we will need to create custom adapter
 		List<BookModel> booklist=new ArrayList<BookModel>();

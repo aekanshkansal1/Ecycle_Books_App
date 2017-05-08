@@ -112,7 +112,7 @@ public class AddBook extends Activity {
 		JSONParser jparser=new JSONParser();
 		
 		private ProgressDialog pDialog;
-		private static final String ADD_BOOK_URL="http://special11.com/EcycleBooks/addbook.php";
+		private static final String ADD_BOOK_URL="website/addbook.php";
 		@Override
 		protected void onPreExecute() {
 			super.onPreExecute();

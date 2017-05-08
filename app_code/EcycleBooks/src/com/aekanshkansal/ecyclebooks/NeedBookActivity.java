@@ -100,7 +100,7 @@ public class NeedBookActivity extends Activity {
 		private ProgressDialog pDialog;
 
 		//url for login on server
-		private static final String POST_URL="http://special11.com/EcycleBooks/getcontact.php";
+		private static final String POST_URL="website/getcontact.php";
 
 		@Override
 		protected void onPreExecute() {

@@ -108,7 +108,7 @@ public class ListBooks extends Activity {
 		private ProgressDialog pDialog;
 
 		//url for login on server
-		private static final String POST_URL="http://special11.com/EcycleBooks/listbooks.php";
+		private static final String POST_URL="website/listbooks.php";
 
 		//This adapter is just used to get the data and store whole data.
 		//This is not used to show data as we will need to create custom adapter

@@ -1,5 +1,5 @@
-create database ecycle;
-use ecycle;
+create database dbname;
+use dbname;
 create table elogin
 (
 userid varchar(10) PRIMARY KEY,
