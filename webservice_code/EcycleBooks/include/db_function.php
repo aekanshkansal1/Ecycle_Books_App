@@ -122,7 +122,7 @@ class db_function
 
     public function searchbooks($keyword)
     {
-        $stmt=$this->conn->prepare("select * from ebooks where bookname LIKE '%$keyword%'");
+        $stmt=$this->conn->prepare("select userid,bookname,author,publication,edition,mrp,price,booktype from eposts where bookname LIKE '%$keyword%' COLLATE UTF8_GENERAL_CI");
         if($stmt->execute(array($keyword)))
         {
             //If rows found in database return all of them as associative array
@@ -141,10 +141,10 @@ class db_function
         }
     }
 
-    public function sellBooks($userid,$bookid,$mrp,$price,$edition)
+    public function sellBooks($userid,$bookname,$author,$publication,$mrp,$price,$edition)
     {
-        $stmt = $this->conn->prepare("insert into eposts values(?,?,?,?,?,?,?,?)");
-            if ($stmt->execute(array(0,$userid, $bookid, $edition, $mrp, $price, 'used', 'U'))) {
+        $stmt = $this->conn->prepare("insert into eposts values(?,?,?,?,?,?,?,?,?,?)");
+            if ($stmt->execute(array(0,$userid, $bookname,$author,$publication,$edition, $mrp, $price, 'used', 'U'))) {
                 return true;
             } else {
                 return false;
@@ -153,42 +153,16 @@ class db_function
 
         }
 
-    public function donateBooks($userid,$bookid,$edition)
+    public function donateBooks($userid,$bookname,$author,$publication,$edition)
     {
-        $stmt = $this->conn->prepare("insert into eposts values(?,?,?,?,?,?,?,?)");
-        if ($stmt->execute(array(0,$userid, $bookid, $edition, 'NA', 'NA',  'donated', 'U'))) {
+        $stmt = $this->conn->prepare("insert into eposts values(?,?,?,?,?,?,?,?,?,?)");
+        if ($stmt->execute(array(0,$userid, $bookname,$author,$publication,$edition, 'NA', 'NA',  'donated', 'U'))) {
             return true;
         } else {
             return false;
             //Failed To add Post
         }
 
-    }
-
-    public function duplicatePosts($userid,$bookid,$edition,$booktype)
-    {
-        $stmt = $this->conn->prepare("select edition from eposts where userid=? and bookid=? and booktype=?");
-        if($stmt->execute(array($userid,$bookid,$booktype)))
-        {
-            if($row=$stmt->fetch())
-            {
-              if($row['edition']==$edition) {
-                  return true;
-              }
-                else
-                {
-                return false;
-                }
-            }
-            else
-            {
-                return false;
-            }
-        }
-        else
-        {
-            return -1;
-        }
     }
 
     public function addBooks($name,$author,$publication)
